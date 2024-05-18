@@ -1,0 +1,46 @@
+body {
+    /* Alegreya is a Google font. Link tag for font in HTML head tag. */
+    font-family: 'Alegreya', serif;
+    font-size: 20px;
+
+    /* Horizontally centre the body. */
+    margin: 20px auto;
+
+    /* Defaults "full" width. Media queries below will change this based on screen width. */
+    width: 1230px;
+}
+
+/* No margin above photographer name links. */
+h3.photographer {
+    margin: 0 0 2em 0;
+}
+
+/* The large images always stretch to the current body width. */
+#large-images img {
+    width: 65%;
+}
+
+/* Gallery is a grid with 300px columns. At full width (1230px) there are four columns. */
+#gallery {
+    display: grid;
+
+    /* Auto fill the columns based on how many will fit. */
+    grid-template-columns: repeat(auto-fill, 300px);
+
+    grid-gap: 10px;
+    margin-bottom: 2em;
+}
+
+/* For screen widths less than 1270px (but greater than 659px) switch to a two column layout. */
+@media only screen and (max-width: 1269px) {
+    body {
+        width: 620px;
+    }
+}
+
+/* For screen widths less than 660px switch to a one column layout. */
+@media only screen and (max-width: 659px) {
+    body {
+        width: 300px;
+    }
+}
