@@ -53,7 +53,6 @@ $config = [
         ";
         };
         ?>
-        <!-- <p>My name is $eachGhost. My nickname is {$array['nickname']}. I am {$array['color']}.</p> -->
 
     </div>
     <?= "<h1>" . count($config['local_images']) . " Large Images</h1>" ?>
