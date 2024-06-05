@@ -44,31 +44,29 @@ $config = [
     <?= "<h1>{$config['gallery_name']}</h1>" ?>
     <div id="gallery">
         <?php
-        foreach ($config['unsplash_categories'] as $category) {
-            echo "
-        <div>
-            <h2>" . ucfirst($category) . "</h2>
-            <img src='https://source.unsplash.com/300x200/?$category' alt='$category'>
-        </div>
-        ";
-        };
+            foreach ($config['unsplash_categories'] as $category) {
+                echo "
+                    <div>
+                        <h2>" . ucfirst($category) . "</h2>
+                        <img src='https://source.unsplash.com/300x200/?$category' alt='$category'>
+                    </div>
+                ";
+            };
         ?>
-
     </div>
     <?= "<h1>" . count($config['local_images']) . " Large Images</h1>" ?>
     <div id="large-images">
-
         <?php
-        foreach ($config['local_images'] as $webpage => $array) {
-            $photographer = $array[0];
-            $image = $array[1];
-            echo "
-            <div>
-                <img src=\"images/$image\" alt=\"$photographer\">
-                <h3 class=\"photographer\"><a href=\"https://unsplash.com/@$webpage\">$photographer</a></h3>
-            </div>
-            ";
-        }
+            foreach ($config['local_images'] as $webpage => $array) {
+                $photographer = $array[0];
+                $image = $array[1];
+                echo "
+                    <div>
+                        <img src=\"images/$image\" alt=\"$photographer\">
+                        <h3 class=\"photographer\"><a href=\"https://unsplash.com/@$webpage\">$photographer</a></h3>
+                    </div>
+                ";
+            }
         ?>
     </div>
 
