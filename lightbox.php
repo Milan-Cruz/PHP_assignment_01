@@ -56,9 +56,11 @@ $config = [
             echo "
         <div>
             <h2>" . ucfirst($photographer) . "</h2>
-            <a href=\"images/$image\">
-                <img src=\"images/$thumbnail_image\" alt=\"$photographer\">
-            </a>
+            <div class=\"image\">
+                <a href=\"images/$image\">
+                    <img src=\"images/$thumbnail_image\" alt=\"$photographer\">
+                </a>
+            </div>
         </div>
         ";
         };
