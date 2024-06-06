@@ -47,23 +47,21 @@ $config = [
 
     <?= "<h1>{$config['gallery_name']}</h1>" ?>
     <div id="gallery">
-
         <?php
-        foreach ($config['local_images'] as $webpage => $array) {
-            $photographer = $array[0];
-            $image = $array[1];
-            $thumbnail_image = str_replace('.png', '_thumbnail.png', $image); // Concatenate _thumbnail
-            echo "
-        <div>
-            <h2>" . ucfirst($photographer) . "</h2>
-            <a href=\"images/$image\">
-                <img src=\"images/$thumbnail_image\" alt=\"$photographer\">
-            </a>
-        </div>
-        ";
-        };
+            foreach ($config['local_images'] as $webpage => $array) {
+                $photographer = $array[0];
+                $image = $array[1];
+                $thumbnail_image = str_replace('.png', '_thumbnail.png', $image); // Concatenate _thumbnail
+                echo "
+                    <div>
+                        <h2>" . ucfirst($photographer) . "</h2>
+                        <a href=\"images/$image\">
+                            <img src=\"images/$thumbnail_image\" alt=\"$photographer\">
+                        </a>
+                    </div>
+                ";
+            };
         ?>
-
     </div>
     <script>
         new LuminousGallery(document.querySelectorAll(".image a"));
